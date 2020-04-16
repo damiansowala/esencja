@@ -1,0 +1,35 @@
+.single-post {
+    h2[class="h2"] {
+        margin-bottom: 50px;
+    }
+
+    .section_blog-article-info {
+        margin-bottom: 10px;
+    }
+}
+
+#blog {
+    .h2 {
+        text-transform: unset;
+    }
+
+    .section_blog-article {
+        border-bottom: 1px solid $accent;
+    }
+
+    div[class="col-12 col-lg-10"] {
+
+        .section_blog:nth-last-child(1),
+        .section_blog:nth-last-child(2) {
+            .section_blog-article {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.page-template-template-buy {
+    .section_block-test {
+        margin-top: 80px;
+    }
+}

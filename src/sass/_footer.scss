@@ -1,0 +1,171 @@
+.footer {
+    margin-top: 50px;
+    height: 360px;
+    background-image: url('images/bg-footer.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    .row {
+        justify-content: space-evenly;
+    }
+
+    @include mq('phone-sm') {
+        height: auto;
+        justify-content: center;
+
+        .col-12 {
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+
+    &_contact {
+        margin: 20px 0px;
+
+        p {
+            margin: 0;
+
+            a {
+                font-size: 18px;
+                color: $light;
+            }
+        }
+    }
+
+    img {
+        width: 232px;
+        filter: invert(100%);
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+
+        @include mq('phone-sm') {
+            position: inherit;
+            top: inherit;
+            z-index: 700;
+        }
+
+        a {
+            background-color: $light;
+            color: $accent;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+        }
+    }
+
+    .autor-link {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        font-size: 12px;
+
+        a {
+            color: $light;
+        }
+    }
+
+    .wpcf7 {
+        @include mq('phone-sm') {
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            height: 30px;
+            border-radius: 2px;
+            border: none;
+            margin-bottom: 10px;
+            padding: 10px;
+
+            @include mq('phone-sm') {
+                width: 100%;
+            }
+
+            @include mq('tablet') {
+                width: 300px;
+            }
+        }
+
+        input[type="send"] {
+            @include upper;
+        }
+
+        textarea {
+            border-radius: 2px;
+            border: none;
+            padding: 10px;
+            max-height: 90px;
+
+            @include mq('phone-sm') {
+                width: 100%;
+            }
+
+            @include mq('tablet') {
+                width: 300px;
+            }
+        }
+
+        .form-button {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+
+            @include mq('phone-sm') {
+                width: 100%;
+            }
+
+            @include mq('tablet') {
+                width: 300px;
+            }
+
+            .ajax-loader {
+                display: none;
+            }
+
+            input {
+                width: 126px;
+            }
+        }
+
+        input[type='file'] {
+            -webkit-appearance: none;
+            -webkit-rtl-ordering: left;
+            text-align: left;
+        }
+
+        .wpcf7-file::-webkit-file-upload-button {
+            -webkit-appearance: none;
+            font-family: 'Open Sans',
+                sans-serif;
+            display: inline-block;
+            font-weight: 400;
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: none;
+            transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+        }
+
+        .wpcf7-file:hover::-webkit-file-upload-button {
+            border-color: rgb(236, 236, 236);
+            color: $dark;
+        }
+    }
+}

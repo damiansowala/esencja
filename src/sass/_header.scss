@@ -1,0 +1,48 @@
+.header {
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &_phone {
+        height: 166px;
+        width: 166px;
+        border-radius: 50%;
+        background-color: $accent;
+        color: $light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        @include trans;
+
+        img {
+            margin-bottom: 8px;
+        }
+
+        &:hover {
+            color: $light;
+            border: 5px solid $accent-hover;
+        }
+
+        span {
+            text-align: center;
+            width: 100%;
+            display: block;
+            line-height: 18px;
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        padding: 0px 50px;
+
+        @include mq('phone-sm') {
+            justify-content: center;
+        }
+
+        @include mq('tablet') {
+            justify-content: space-between;
+        }
+    }
+}
